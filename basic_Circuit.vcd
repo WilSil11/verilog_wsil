@@ -1,0 +1,149 @@
+$date
+	Sun Nov 24 11:35:03 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module basic_Circuit_tb $end
+$var wire 1 ! wF $end
+$var reg 1 " wA $end
+$var reg 1 # wB $end
+$var reg 1 $ wC $end
+$var reg 1 % wD $end
+$scope module uut $end
+$var wire 1 & A $end
+$var wire 1 ' A_nB $end
+$var wire 1 ( A_nC_nD $end
+$var wire 1 ) B $end
+$var wire 1 * B_D $end
+$var wire 1 + C $end
+$var wire 1 , D $end
+$var wire 1 ! F $end
+$var wire 1 - nA $end
+$var wire 1 . nB $end
+$var wire 1 / nC $end
+$var wire 1 0 nD $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+z0
+1/
+1.
+1-
+0,
+0+
+0*
+0)
+1(
+1'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#1
+1!
+1*
+1%
+1,
+#2
+0!
+x(
+0*
+0/
+0%
+0,
+1$
+1+
+#3
+x!
+1*
+1%
+1,
+#4
+0!
+1(
+0'
+1/
+0.
+0%
+0,
+0$
+0+
+1#
+1)
+#5
+1%
+1,
+#6
+x(
+0/
+0%
+0,
+1$
+1+
+#7
+1%
+1,
+#8
+1/
+0*
+1.
+1(
+1'
+0-
+0%
+0,
+0$
+0+
+0#
+0)
+1"
+1&
+#9
+1!
+1*
+1%
+1,
+#10
+0!
+0*
+0/
+0%
+0,
+1$
+1+
+#11
+1!
+1*
+1%
+1,
+#12
+1/
+0.
+0%
+0,
+0$
+0+
+1#
+1)
+#13
+1%
+1,
+#14
+0/
+0%
+0,
+1$
+1+
+#15
+1%
+1,
+#16

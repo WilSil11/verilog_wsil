@@ -1,0 +1,131 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x25bc9e0 .scope module, "xor_p_tb" "xor_p_tb" 2 32;
+ .timescale 0 0;
+v0x25d8b10_0 .net "wP", 0 0, L_0x25d9120; 1 drivers
+v0x25d8bb0_0 .var "wW", 0 0;
+v0x25d8c60_0 .var "wX", 0 0;
+v0x25d8d10_0 .var "wY", 0 0;
+v0x25d8df0_0 .var "wZ", 0 0;
+S_0x25bcad0 .scope module, "uut" "xor_p" 2 71, 2 9, S_0x25bc9e0;
+ .timescale 0 0;
+L_0x25d8ea0 .functor AND 1, v0x25d8bb0_0, L_0x25d93f0, C4<z>, C4<1>;
+L_0x25d8f90 .functor AND 1, v0x25d8d10_0, v0x25d8df0_0, C4<1>, C4<1>;
+L_0x25d90c0 .functor AND 1, L_0x25d92f0, v0x25d8d10_0, C4<1>, C4<1>;
+L_0x25d9120 .functor XOR 1, L_0x25d8ea0, L_0x25d8f90, L_0x25d90c0, C4<0>;
+L_0x25d92f0 .functor NOT 1, v0x25d8c60_0, C4<0>, C4<0>, C4<0>;
+L_0x25d93f0 .functor NOT 1, v0x25d8d10_0, C4<0>, C4<0>, C4<0>;
+v0x25bcbc0_0 .alias "P", 0 0, v0x25d8b10_0;
+v0x25d83d0_0 .net "W", 0 0, v0x25d8bb0_0; 1 drivers
+v0x25d8470_0 .net "WnYZ", 0 0, L_0x25d8ea0; 1 drivers
+v0x25d8510_0 .net "X", 0 0, v0x25d8c60_0; 1 drivers
+v0x25d85c0_0 .net "Y", 0 0, v0x25d8d10_0; 1 drivers
+v0x25d8660_0 .net "YZ", 0 0, L_0x25d8f90; 1 drivers
+v0x25d8740_0 .net "Z", 0 0, v0x25d8df0_0; 1 drivers
+v0x25d87e0_0 .net "nX", 0 0, L_0x25d92f0; 1 drivers
+v0x25d88d0_0 .net "nXY", 0 0, L_0x25d90c0; 1 drivers
+v0x25d8970_0 .net "nY", 0 0, L_0x25d93f0; 1 drivers
+v0x25d8a70_0 .net "nZ", 0 0, C4<z>; 0 drivers
+    .scope S_0x25bc9e0;
+T_0 ;
+    %vpi_call 2 38 "$dumpfile", "xor_p.vcd";
+    %vpi_call 2 39 "$dumpvars";
+    %end;
+    .thread T_0;
+    .scope S_0x25bc9e0;
+T_1 ;
+    %vpi_call 2 44 "$display", "  W X Y Z |  nX nY  WnYZ  YZ   nXY  | P";
+    %vpi_call 2 45 "$display", " ---------+-------------------------+---";
+    %vpi_call 2 49 "$monitor", "  %b %b %b %b | %2b %2b   %2b    %2b   %2b   | %b", v0x25d8bb0_0, v0x25d8c60_0, v0x25d8d10_0, v0x25d8df0_0, v0x25d87e0_0, v0x25d8970_0, v0x25d8470_0, v0x25d8660_0, v0x25d88d0_0, v0x25d8b10_0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 0, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 0, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 0, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x25d8bb0_0, 1, 1;
+    %set/v v0x25d8c60_0, 1, 1;
+    %set/v v0x25d8d10_0, 1, 1;
+    %set/v v0x25d8df0_0, 1, 1;
+    %delay 1, 0;
+    %vpi_call 2 66 "$finish";
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "xor_p.v";
