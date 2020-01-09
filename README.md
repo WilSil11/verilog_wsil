@@ -11,12 +11,12 @@ This repository is intended for hiring managers who wish to get a deeper look at
 
 ## File Descriptions:
 
-**basic_Circuit**
+**basic_circuit**
 1. **basic_Circuit:** _Output file for compilation of basic_Circuit.v file._
 2. **basic_Circuit.v:** _Verilog file containing code of digital circuit design._
 3. **basic_Circuit.vcd:** _Dumpfile that outputs results of synthesized digital circuit._
 
-**my_xor_p**
+**my_xor**
 1. **my_xor_p:** _Output file for compilation of my_xor_p.v file._
 2. **my_xor_p.v:** _Verilog file containing code of digital circuit design._
 3. **my_xor_p.vcd:** _Dumpfile that outputs results of synthesized digital circuit._
