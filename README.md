@@ -5,10 +5,6 @@ This repository is comprised of code in Verilog for digital circuit designs comp
 
 **Please Note: This repository is work in progress! Changes can and _will_ occur! This code and documentation is a demonstration of personal projects.**
 
-## About
-
-This repository is intended for hiring managers who wish to get a deeper look at my competencies and coding style for working with Verilog. Different tasks have been written to demonstrate range/versatility of skill set.
-
 ## File Descriptions:
 
 **basic_circuit**
